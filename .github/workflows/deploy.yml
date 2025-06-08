@@ -43,13 +43,13 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Run Hugo
-        env:
-          # This environment variable tells the Hugo action to override the baseURL
-          # Replace <YOUR_USERNAME> with your actual GitHub username
-          # Replace <YOUR_REPO_NAME> with your actual repository name
-          # Using dynamic variables from GitHub Context for robustness
-          HUGO_BASEURL: "https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/"
-        run: hugo --minify --cleanDestinationDir # Add --minify and --cleanDestinationDir for best practice
+        # env:
+        #   # This environment variable tells the Hugo action to override the baseURL
+        #   # Replace <YOUR_USERNAME> with your actual GitHub username
+        #   # Replace <YOUR_REPO_NAME> with your actual repository name
+        #   # Using dynamic variables from GitHub Context for robustness
+        #   HUGO_BASEURL: "https://${{ github.actor }}.github.io/${{ github.event.repository.name }}/"
+        run: hugo --minify --cleanDestinationDir --environment production
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
