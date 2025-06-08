@@ -1,7 +1,6 @@
 baseURL = '/' # IMPORTANT: Replace with your actual GitHub Pages URL
 languageCode = 'en-us'
 title = 'Game Development Portfolio'
-theme = '' # We're using custom layouts, so no external theme needed here
 enableEmoji = true
 
 [params]
