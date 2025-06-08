@@ -52,7 +52,7 @@ jobs:
         run: hugo --minify --cleanDestinationDir # Add --minify and --cleanDestinationDir for best practice
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire `public` folder
           path: ./public
