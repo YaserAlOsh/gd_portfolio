@@ -14,9 +14,9 @@ weight = 2
         <!-- Example: <iframe width="560" height="315" src="YOUR_YOUTUBE_EMBED_URL" frameborder="0" allowfullscreen></iframe> -->
     </div>
     <div class="image-gallery">
-        <img src="/assets/images/fruiters1.png" alt="Fruiter Screenshot 1" loading="lazy">
-        <img src="/assets/images/fruiters2.png" alt="Fruiter Screenshot 1" loading="lazy">
-        <img src="/assets/images/fruiters3.png" alt="Fruiter Screenshot 1" loading="lazy">
+        {{< figure src="/assets/images/fruiters1.png" alt="Fruiter Screenshot 1" loading="lazy" >}}
+        {{< figure src="/assets/images/fruiters2.png" alt="Fruiter Screenshot 2" loading="lazy" >}}
+        {{< figure src="/assets/images/fruiters3.png" alt="Fruiter Screenshot 3" loading="lazy" >}}
     </div>
 </div>
 

@@ -16,7 +16,7 @@ weight = 3
     <iframe src="https://drive.google.com/file/d/1VjBTCpCSHjMdrOH9Um3g5go4JaJMLSh5/preview" width="1920" height="600" allow="autoplay"></iframe>
     </div>
     <div class="image-gallery">
-        <img src="/assets/images/cybersecurity_td.png" alt="Cybersecurity Towerdefense Screenshot 1" loading="lazy">
+{{< figure src="/assets/images/cybersecurity_td.png" alt="Cybersecurity TD" loading="lazy" style="width: 100%; border-radius: 8px;" >}}
     </div>
 </div>
 
