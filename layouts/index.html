@@ -1,0 +1,93 @@
+{{ define "main" }}
+<section id="hero">
+    <!-- Background Video - Keep this if you have the video file -->
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="/assets/videos/herobg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="hero-content">
+            <h1>{{ .Site.Params.author }}</h1>
+            <!-- UPDATED HEADLINE -->
+            <h2>Passionate Game Developer & Creative Technologist</h2>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Abu Dhabi, UAE</p>
+            <div class="social-links-hero">
+                <a href="https://www.linkedin.com/in/profile" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/YaserAlOsh" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://yaser-alosh.netlify.app" target="_blank" rel="noopener noreferrer" title="Personal Website">
+                    <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://marahil.org" target="_blank" rel="noopener noreferrer" title="Marahil.org Blog">
+                    <i class="fas fa-book-reader"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <!-- UPDATED ABOUT ME TEXT -->
+        <p>While my primary professional focus lies elsewhere, game development is my true creative passion. It's a journey I've been exploring for years, starting as a hobbyist and gradually evolving into a semi-professional endeavor on a small scale. I love pushing the boundaries of what's possible, and I constantly seek opportunities to dive deeper into this exciting field.</p>
+        <p>My projects showcase a wide array of skills across the game development pipeline: from intricate shader programming and physics simulations to crafting engaging gameplay mechanics, building robust systems, and collaborating effectively in diverse, international teams. Most of these projects originated from university courses, game jams, or personal explorations. Despite their hobbyist beginnings, they were developed with a strong emphasis on production-quality standards, reflecting a professional approach even in unpaid, indie settings.</p>
+        <p>Beyond building games, I'm also deeply committed to fostering learning and knowledge sharing within the game development community. You can see an example of this in my past work with Marahil.org.</p>
+        <p>Explore my projects below to see what I've been working on and the skills I bring to the table!</p>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            {{ $sortedProjects := where .Site.RegularPages "Type" "projects" }}
+            {{ range sort $sortedProjects "Params.weight" "asc" }}
+            <div class="project-item" id="{{ .Title | urlize }}">
+                    <h3>{{ .Title }}</h3>
+                {{ if .Params.subtitle }}
+                    <p class="subtitle">{{ .Params.subtitle }}</p>
+                {{ end }}
+
+                {{ if .Params.tech }}
+                    <p class="project-meta"><strong>Technologies:</strong> {{ delimit .Params.tech ", " }}</p>
+                {{end}}
+
+                <div class="project-content">
+                    {{ .Content }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<section id="marahil-org">
+    <div class="container">
+        <!-- UPDATED MARAHIL.ORG HEADLINE -->
+        <h2>Marahil.org - My Contributions to Arabic Game Development Education</h2>
+        <!-- UPDATED MARAHIL.ORG TEXT -->
+        <p>I am the founder of <a href="https://marahil.org" target="_blank" rel="noopener noreferrer">Marahil.org</a>, a pioneering blog dedicated to game development education in the Arabic language. This platform was a passion project where I shared my knowledge and contributed to building the Arab game development community, demonstrating my comprehensive understanding of game development principles and strong teaching abilities.</p>
+        <p>On Marahil.org, you'll find a variety of content I authored, including:</p>
+        <ul>
+            <li>Tutorials specifically focused on the Unity engine and its features.</li>
+            <li>Guidance on using the Arabic language within Unity projects.</li>
+            <li>Valuable tips for general game design principles.</li>
+            <li>Insights into choosing the right game engine for your project.</li>
+            <li>Curated resources for learning game development.</li>
+            <li>A comprehensive 2D-platformer tutorial series.</li>
+        </ul>
+        <p>This resource showcases my practical skills in game development and my commitment to empowering new developers through clear, accessible instruction.</p>
+        <div class="media-placeholder image">
+            <!-- Placeholder for Marahil.org images. Add real images here later. -->
+            <p>Images of Marahil.org will go here.</p>
+            <!-- Example: <img src="/assets/images/marahil-screenshot-1.jpg" alt="Marahil.org Screenshot 1" loading="lazy"> -->
+        </div>
+        <a href="https://marahil.org" target="_blank" rel="noopener noreferrer" class="cta-button">Visit Marahil.org</a>
+    </div>
+</section>
+{{ end }}

@@ -1,0 +1,15 @@
+{{/*
+layouts/_default/functions.html
+
+Custom function to sort pages by weight.
+Usage: {{ sortPagesByWeight .Pages }}
+*/}}
+{{ define "sortPagesByWeight" }}
+  {{ $pages := . }}
+  {{ $sorted := slice }}
+  {{ range $pages }}
+    {{ $sorted = $sorted | append . }}
+  {{ end }}
+  {{ $sorted = sort $sorted "Params.weight" "asc" }}
+  {{ $sorted }}
+{{ end }}

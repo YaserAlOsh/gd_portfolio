@@ -1,0 +1,35 @@
+baseURL = '/' # IMPORTANT: Replace with your actual GitHub Pages URL
+languageCode = 'en-us'
+title = 'Game Development Portfolio'
+theme = '' # We're using custom layouts, so no external theme needed here
+enableEmoji = true
+
+[params]
+  author = "Yaser Haitham Alosh"
+  email = "yaserhthml@gmail.com" # Optional: Replace with your actual email
+  description = "Portfolio showcasing game development projects by Yaser Haitham Alosh."
+
+# Define a custom content type for projects
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[taxonomies]
+  tech = "technologies" # For organizing projects by technology used
+
+# Configure paths for the "docs" folder for GitHub Pages
+# If you configure GitHub Pages to serve from the 'main' branch /docs folder
+publishDir = "public" # IMPORTANT: Tell Hugo to build to 'docs' folder
+
+[module]
+  [module.hugoVersion]
+    min = "0.100.0" # Adjust based on your Hugo version
+
+[cascade]
+  [[cascade.content.projects]]
+    layout = "projects/single" # Default layout for content/projects/*.toml files
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title | default .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
+    <link rel="icon" type="image/x-icon" href="{{ "/assets/favicon.ico" | relURL }}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="{{ .Site.BaseURL | relURL }}" class="site-title">{{ .Site.Title }}</a>
+            <nav>
+                <ul>
+                    <li><a href="{{ .Site.BaseURL | relURL }}#about">About</a></li>
+                    <li><a href="{{ .Site.BaseURL | relURL }}#projects">Projects</a></li>
+                    <li><a href="https://marahil.org" target="_blank" rel="noopener noreferrer">Marahil.org <i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://yaser-alosh.netlify.app" target="_blank" rel="noopener noreferrer">Portfolio Site <i class="fas fa-external-link-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ block "main" . }}
+            <!-- This is where content from other templates will be injected -->
+        {{ end }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/profile" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/YaserAlOsh" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://yaser-alosh.netlify.app" target="_blank" rel="noopener noreferrer" title="Personal Website">
+                    <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://marahil.org" target="_blank" rel="noopener noreferrer" title="Marahil.org Blog">
+                    <i class="fas fa-book-reader"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="project-detail">
+    <div class="container">
+        <a href="{{ "/#projects" | relURL }}" class="back-link">← Back to Projects</a>
+        <h1>{{ .Title }}</h1>
+        {{ if .Params.subtitle }}
+            <p class="subtitle">{{ .Params.subtitle }}</p>
+        {{ end }}
+
+        {{ if .Params.status }}
+            <p class="project-meta"><strong>Status:</strong> {{ .Params.status }}</p>
+        {{ end }}
+        {{ if .Params.tech }}
+            <p class="project-meta"><strong>Technologies:</strong> {{ delimit .Params.tech ", " }}</p>
+        {{ end }}
+
+        <div class="project-content">
+            {{ .Content }}
+        </div>
+    </div>
+</section>
+{{ end }}

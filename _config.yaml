@@ -1,0 +1,32 @@
+# Site settings
+title: Yaser Haitham Alosh - Game Developer Portfolio
+description: Portfolio showcasing game development projects by Yaser Haitham Alosh.
+author: Yaser Haitham Alosh
+email: yaserhthm@gmail.com # Optional: Replace with your actual email
+
+# GitHub Pages base URL (important for assets)
+baseurl: "" # For user pages (yourusername.github.io), this is typically empty
+url: "https://yaseralosh.github.io/games-" # Replace with your GitHub Pages URL
+
+# Build settings
+markdown: kramdown
+theme: minima # You can keep this or remove it if you fully customize
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Custom collections for projects
+collections:
+  projects:
+    output: true # Generate pages for each project
+    permalink: /projects/:name/ # URL structure for projects
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

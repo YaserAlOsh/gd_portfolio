@@ -1,0 +1,90 @@
+---
+layout: default
+title: Yaser Haitham Alosh - Game Developer Portfolio
+---
+
+<section id="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Yaser Haitham Alosh</h1>
+            <h2>Computer Science Graduate, Game Developer</h2>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Sharjah, UAE</p>
+            <div class="social-links-hero">
+                <a href="https://www.linkedin.com/in/profile" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/YaserAlOsh" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://yaser-alosh.netlify.app" target="_blank" rel="noopener noreferrer" title="Personal Website">
+                    <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://marahil.org" target="_blank" rel="noopener noreferrer" title="Marahil.org Blog">
+                    <i class="fas fa-book-reader"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>I am a passionate Computer Science Graduate with a focus on game development. I thrive on building engaging interactive experiences, leveraging my skills in programming, design, and problem-solving.</p>
+        <p>Beyond game development, I am also the founder of <a href="https://marahil.org" target="_blank" rel="noopener noreferrer">Marahil.org</a>, the first Arabic blog dedicated to game development. This platform aims to share knowledge and foster the game development community in the Arab world.</p>
+        <p>Explore my projects below to see what I've been working on!</p>
+    </div>
+</section>
+
+<section id="projects-section"> {# This is the main section wrapper for all projects #}
+    <div class="container">
+        <h2>My Projects</h2>
+
+        {% assign sorted_projects = site.projects | sort: "weight" %} {# Sort projects if you add 'weight' to frontmatter #}
+
+        {% for project in sorted_projects %}
+            <section class="project-item" id="{{ project.title | slugify }}"> {# Each project gets its own section and ID #}
+                <h3>{{ project.title }}</h3>
+                {% if project.subtitle %}
+                    <p class="subtitle">{{ project.subtitle }}</p>
+                {% endif %}
+
+                {% if project.status %}
+                    <p class="project-meta"><strong>Status:</strong> {{ project.status }}</p>
+                {% endif %}
+                {% if project.tech %}
+                    <p class="project-meta"><strong>Technologies:</strong> {{ project.tech | join: ", " }}</p>
+                {% endif %}
+
+                <div class="project-content">
+                    {{ project.content }} {# This will render the markdown content of each project #}
+                </div>
+
+                {% if forloop.last == false %}
+                    <hr class="project-separator"> {# Add a separator between projects #}
+                {% endif %}
+            </section>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="marahil-org">
+    <div class="container">
+        <h2>Marahil.org - The First Arabic Game Development Blog</h2>
+        <p>I am the founder of <a href="https://marahil.org" target="_blank" rel="noopener noreferrer">Marahil.org</a>, a pioneering platform dedicated to game development in the Arabic language. Our mission is to educate, inspire, and connect aspiring and established game developers across the Arab world.</p>
+        <p>On Marahil.org, you'll find:</p>
+        <ul>
+            <li>Tutorials and guides for various game engines and programming languages.</li>
+            <li>Articles on game design principles and industry trends.</li>
+            <li>Interviews with Arab game developers.</li>
+            <li>Community resources and event listings.</li>
+        </ul>
+        <p>I will add images of the blog here later, but feel free to visit the site and explore the content!</p>
+        <div class="media-placeholder image">
+            <!-- Placeholder for Marahil.org images. Add real images here later. -->
+            <p>Images of Marahil.org will go here.</p>
+            <!-- Example: <img src="/assets/images/marahil-screenshot-1.jpg" alt="Marahil.org Screenshot 1" loading="lazy"> -->
+        </div>
+        <a href="https://marahil.org" target="_blank" rel="noopener noreferrer" class="cta-button">Visit Marahil.org</a>
+    </div>
+</section>

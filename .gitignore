@@ -1,0 +1,56 @@
+# Hugo ignores
+# ========================
+
+# Hugo's generated public directory
+# (This is where your final static site files go, don't commit it)
+/public/
+
+# Hugo's cache directory
+# (Temporary files used by Hugo for faster builds)
+.hugo_build.lock
+.hugo_build.lock.json
+/resources/_gen/
+/public/
+
+
+# Build directory if you use a custom one (like 'docs' for GitHub Pages)
+# If your publishDir is 'docs', then you *DO NOT* want to ignore 'docs'
+# If you are publishing to 'docs' and you DO want to ignore the 'public' folder
+# (which Hugo usually generates as a staging area before moving to docs)
+# then ensure /public/ is listed above.
+# If you use 'docs' as your publishDir, you would *not* ignore 'docs'.
+
+# --- For GitHub Pages specific setup ---
+# If your publishDir is 'docs', you want to *keep* the 'docs' folder in Git.
+# If you are building locally and pushing 'docs', uncommenting /public/ is usually correct.
+# If you are using GitHub Actions to build and deploy, then you just ignore 'public/'.
+# In your current setup: publishDir = "docs", so you want 'docs' to be committed.
+# Therefore, make sure /docs/ is NOT in this file.
+
+# Operating System files
+# ========================
+.DS_Store # macOS
+Thumbs.db # Windows
+ehthumbs.db # Windows
+Desktop.ini # Windows
+
+# IDE/Editor specific files (add as needed)
+# ========================
+.vscode/ # VS Code settings
+.idea/ # IntelliJ / WebStorm
+*.sublime-project
+*.sublime-workspace
+*.swp # Vim swap files
+*~ # Emacs backup files
+
+# Dependencies (if you add Node.js for postcss/webpack etc.)
+# ========================
+/node_modules/
+
+# Log files
+# ========================
+*.log
+
+# Personal/Sensitive files (if you have any)
+# ========================
+.env # Environment variables
