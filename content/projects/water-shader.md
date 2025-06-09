@@ -12,7 +12,6 @@ weight = 6
         <!-- Replace with your YouTube embed code or a video file -->
          <!-- <img src="/assets/videos/Water-Shader-Preview.gif" alt="Animated 2D water shader effect" loading="lazy" style="width: 100%; border-radius: 8px;"> -->
          {{< figure src="assets/videos/Water-Shader-Preview.gif" alt="Animated 2D water shader effect" loading="lazy" style="width: 100%; border-radius: 8px;" >}}
-
     </div>
     <a href="https://github.com/YaserAlOsh/2D-Water-Shader-Unity" target="_blank" rel="noopener noreferrer" class="cta-button">
             <i class="fab fa-github"></i> View on GitHub
