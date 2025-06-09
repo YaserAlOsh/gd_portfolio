@@ -13,7 +13,7 @@ weight = 3
     <source src="/assets/videos/Cybersecurity-TD-Preview.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video> -->
-    <iframe src="https://drive.google.com/file/d/1VjBTCpCSHjMdrOH9Um3g5go4JaJMLSh5/preview" width="1920" height="600" allow="autoplay"></iframe>
+    <iframe src="https://drive.google.com/file/d/1VjBTCpCSHjMdrOH9Um3g5go4JaJMLSh5/preview" width="1920" height="600" allow="autoplay fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="image-gallery">
 {{< figure src="assets/images/cybersecurity_td.png" alt="Cybersecurity TD" loading="lazy" style="width: 100%; border-radius: 8px;" >}}
