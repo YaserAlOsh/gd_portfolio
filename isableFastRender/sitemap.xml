@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>//localhost:1313/projects/binary-thrust/</loc>
+  </url><url>
+    <loc>//localhost:1313/projects/fruiter/</loc>
+  </url><url>
+    <loc>//localhost:1313/projects/cybersecurity-towerdefense/</loc>
+  </url><url>
+    <loc>//localhost:1313/projects/clones/</loc>
+  </url><url>
+    <loc>//localhost:1313/projects/math-platformer/</loc>
+  </url><url>
+    <loc>//localhost:1313/projects/water-shader/</loc>
+  </url><url>
+    <loc>//localhost:1313/</loc>
+  </url><url>
+    <loc>//localhost:1313/projects/</loc>
+  </url><url>
+    <loc>//localhost:1313/public/</loc>
+  </url><url>
+    <loc>//localhost:1313/technologies/</loc>
+  </url>
+</urlset>
