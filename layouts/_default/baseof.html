@@ -19,10 +19,11 @@
             <a href="{{ .Site.BaseURL | relURL }}" class="site-title">{{ .Site.Title }}</a>
             <nav>
                 <ul>
-                    <li><a href="{{ .Site.BaseURL | relURL }}#about">About</a></li>
-                    <li><a href="{{ .Site.BaseURL | relURL }}#projects">Projects</a></li>
+                    <li><a href="#about" onclick="event.preventDefault(); document.querySelector('#about').scrollIntoView({behavior: 'smooth'});">About</a></li>
+                    <li><a href="#skills" onclick="event.preventDefault(); document.querySelector('#skills').scrollIntoView({behavior: 'smooth'});">Skills</a></li>
+                    <li><a href="#projects" onclick="event.preventDefault(); document.querySelector('#projects').scrollIntoView({behavior: 'smooth'});">Projects</a></li>
                     <li><a href="https://marahil.org" target="_blank" rel="noopener noreferrer">Marahil.org <i class="fas fa-external-link-alt"></i></a></li>
-                    <li><a href="https://yaser-alosh.netlify.app" target="_blank" rel="noopener noreferrer">Portfolio Site <i class="fas fa-external-link-alt"></i></a></li>
+                    <li><a href="https://yaseralosh.netlify.app" target="_blank" rel="noopener noreferrer">Portfolio Site <i class="fas fa-external-link-alt"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -44,7 +45,7 @@
                 <a href="https://github.com/YaserAlOsh" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://yaser-alosh.netlify.app" target="_blank" rel="noopener noreferrer" title="Personal Website">
+                <a href="https://yaseralosh.netlify.app" target="_blank" rel="noopener noreferrer" title="Personal Website">
                     <i class="fas fa-globe"></i>
                 </a>
                 <a href="https://marahil.org" target="_blank" rel="noopener noreferrer" title="Marahil.org Blog">
